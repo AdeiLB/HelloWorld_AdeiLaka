@@ -10,6 +10,7 @@ public class Main : MonoBehaviour
     {
         enemy = new Enemy("Bob");
         Player player = new Player("Mike");
+        Debug.Log("Hello git commit");
       
     }
 
