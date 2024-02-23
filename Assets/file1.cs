@@ -15,6 +15,11 @@ public class Character
         Debug.Log("Hola soy " + name);
     }
 
+    public virtual void takeDamage(int damage)
+    {
+        life -= damage;
+    }
+
     ~Character()
     {
         Debug.Log("Destroyed.");

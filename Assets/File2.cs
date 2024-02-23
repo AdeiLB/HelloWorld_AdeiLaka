@@ -6,9 +6,15 @@ public class Player : Character
  {
     public Player(string name) : base(name)
     {
-
+       
     }
- }
+
+    public override void takeDamage(int damage)
+    {
+        base.takeDamage(damage);
+    }
+
+}
 
 public class Enemy : Character
  {
@@ -17,6 +23,7 @@ public class Enemy : Character
     {
        
     }
+
  }
 
 

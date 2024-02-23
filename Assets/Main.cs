@@ -21,5 +21,6 @@ using UnityEngine;
         {
             Debug.Log("Enemy name " + enemy.name);
             Debug.Log("Enemy HP" + enemy.Life);
+            enemy.takeDamage();
         }
     }
