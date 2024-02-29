@@ -11,7 +11,7 @@ public class Player : Character
 
     public override void takeDamage(int damage)
     {
-        base.takeDamage(damage);
+        base.takeDamage(0);
     }
 
 }
@@ -23,7 +23,11 @@ public class Enemy : Character
     {
        
     }
+    public override void takeDamage(int damage)
+    {
+        base.takeDamage(damage);
+    }
 
- }
+}
 
 
