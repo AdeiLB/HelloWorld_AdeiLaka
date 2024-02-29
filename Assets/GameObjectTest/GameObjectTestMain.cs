@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class GameObjectTestMain : MonoBehaviour
 {
-    Vector3 pos;
-    private Transform transformation;
+    [SerializeField]
+    private GameObject otherGameObject;
+    public Vector3 pos;
+   
     // Start is called before the first frame update
     void Start()
     {
-        
+        otherGameObject = GameObject.Find("Cube");
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        pos = GameObject.Find("Cube").transform.position;
-        Debug.Log("la posicion X de el objeto es " + pos.x);
+        pos = otherGameObject.transform.position;
+        Debug.Log("la posicion del objeto es " + pos);
 
     }
 }
