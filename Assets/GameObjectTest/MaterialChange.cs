@@ -5,14 +5,14 @@ using UnityEngine;
 public class MaterialChange : MonoBehaviour
 {
     [SerializeField]
-    private GameObject objetoaCambiar;
+    private GameObject objectToCange;
     private Renderer renderObjetoCambiar;
     private Color colorObjeto;
     // Start is called before the first frame update
     void Start()
     {
-        objetoaCambiar = GameObject.Find("Sphere");
-        renderObjetoCambiar = objetoaCambiar.GetComponent<Renderer>();
+        objectToCange = GameObject.Find("Sphere");
+        renderObjetoCambiar = objectToCange.GetComponent<Renderer>();
     }
 
     // Update is called once per frame

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Blue
   - Enemy
+  - Wheel
+  - Wagon
+  - Metal
   layers:
   - Default
   - TransparentFX

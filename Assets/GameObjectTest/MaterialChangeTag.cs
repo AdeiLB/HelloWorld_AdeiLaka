@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class MaterialChangeTag : MonoBehaviour
 {
+
+    public enum tagTypes
+    {
+        Wheel,
+        Wagon,
+        Metal
+    }
+
     private GameObject[]  ObjectList;
     [SerializeField]
     public Color WantedColor;
