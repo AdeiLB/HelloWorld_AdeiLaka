@@ -5,13 +5,20 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-   private GameObject cube;
+  
    [SerializeField]
     public float speed;
+    public bool rot;
 
     void Start()
     {
-        cube = GameObject.Find("Cube");
+        CreateCube();
+    }
+
+    private void CreateCube()
+    {
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.transform.SetParent(this.transform);
     }
 
     // Update is called once per frame
@@ -19,6 +26,11 @@ public class Movement : MonoBehaviour
     {
         checkMovement();
         checkScale();
+        if (rot)
+        {
+            rotate();
+        }
+        
     }
 
     private void PrintPosition()
@@ -32,6 +44,11 @@ public class Movement : MonoBehaviour
 
 
         }
+    }
+
+    private void rotate()
+    {
+        this.transform.rotation *= Quaternion.Euler(0,1 * speed ,0);
     }
 
     private void checkScale()
